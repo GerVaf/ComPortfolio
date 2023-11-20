@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img-decoration {
+  background: rgb(21, 18, 19);
+  background: linear-gradient(
+    180deg,
+    rgba(113, 109, 109, 0) 0%,
+    rgba(23, 23, 23, 1) 96%
+  );
+}
+.inner-img-deco {
+  background: rgb(113, 109, 109);
+  background: linear-gradient(
+    90deg,
+    rgba(113, 109, 109, 0) 0%,
+    rgba(0, 0, 0, 0.6811099439775911) 98%
+  );
+}
+.btn {
+  @apply py-4 px-16 bg-orange-500 hover:bg-white hover:text-black transition duration-150;
+}
+.btn-outline {
+  @apply py-4 px-16 border-2 hover:bg-white hover:text-black transition duration-150;
+}
+@font-face {
+  font-family: idk;
+  src: url(../public/PPMonumentExtended-Black.otf);
+}
+* {
+  font-family: idk;
+}
