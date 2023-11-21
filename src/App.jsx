@@ -9,8 +9,8 @@ const App = () => {
     <div className="h-[700vh] bg-[rgb(21,21,21)] scrollbar-none">
       <Hero />
       <Body />
-      {/* <Changes /> */}
-      <Test/>
+      <Changes />
+      {/* <Test/> */}
     </div>
   );
 };

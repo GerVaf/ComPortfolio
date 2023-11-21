@@ -1,46 +1,42 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Test from "./Test";
 
 const Changes = () => {
   const [startPoint, setStartPoint] = useState(0);
   const controls = useAnimation();
 
   const handleScroll = useCallback(() => {
-    // Calculate the scale factor based on the scroll position
-    const scale = 1 + window.scrollY / 20;
-
-    console.log(scale, "scale");
     setStartPoint(window.scrollY);
-    console.log(startPoint,'startpoint');
 
-    //     console.log(startPoint, "location");
-
-    if (window.scrollY < 1200) {
+    if (window.scrollY < 1400) {
       controls.start({
         scale: 1 + window.scrollY / 200,
       });
+    } else if (window.scrollY > 1400 && window.scrollY < 1800) {
+      controls.start({
+        scale: 1 + window.scrollY / 5,
+      });
     } else {
       controls.start({
-        scale: 1 + window.scrollY / 10,
+        scale: 815,
       });
     }
-  }, [startPoint, controls]);
+  }, [controls]);
 
   useEffect(() => {
-    // Update the start point when the component mounts
-
-    // Event listener for scroll
     const scrollHandler = () => {
       handleScroll();
     };
 
     window.addEventListener("scroll", scrollHandler);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
   }, [handleScroll]);
+
+  console.log(startPoint);
 
   return (
     <div
@@ -48,16 +44,23 @@ const Changes = () => {
         window.scrollY > 1100 ? "fixed top-0" : " static"
       }`}
     >
-      <div className="w-[80%] flex justify-center text-white">
-        <motion.p
-          id="text"
-          className="text-4xl"
-          animate={controls}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        >
-          <p>Opaque</p>
-          <p>industries</p>
-        </motion.p>
+      <div className="w-[80%] flex justify-center text-white relative">
+        {/* first is big text and white space content  */}
+        {/* it's start from 1800 and end in 4000 and new content will come  */}
+        {window.scrollY < 4000 ? (
+          <motion.p
+            className={`text-4xl select-none`}
+            animate={controls}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <p>Opaque</p>
+            <p>industries</p>
+          </motion.p>
+        ) : (
+          <div className=" absolute">
+            <Test />
+          </div>
+        )}
       </div>
     </div>
   );
