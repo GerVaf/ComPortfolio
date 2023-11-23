@@ -7,13 +7,14 @@ const Changes = () => {
   const controls = useAnimation();
 
   const handleScroll = useCallback(() => {
+    
     setStartPoint(window.scrollY);
 
-    if (window.scrollY < 1400) {
+    if (window.scrollY < 2000) {
       controls.start({
-        scale: 1 + window.scrollY / 200,
+        scale: 1 + window.scrollY / 1000,
       });
-    } else if (window.scrollY > 1400 && window.scrollY < 1800) {
+    } else if (window.scrollY > 2000 && window.scrollY < 2500) {
       controls.start({
         scale: 1 + window.scrollY / 5,
       });
@@ -41,7 +42,7 @@ const Changes = () => {
   return (
     <div
       className={`w-full h-[100vh] flex items-center justify-center overflow-hidden ${
-        window.scrollY > 1100 ? "fixed top-0" : " static"
+        window.scrollY > 2000 ? "fixed top-0" : " static"
       }`}
     >
       <div className="w-[80%] flex justify-center text-white relative">
