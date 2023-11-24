@@ -19,10 +19,10 @@
   );
 }
 .btn {
-  @apply py-4 px-16 bg-orange-500 hover:bg-white hover:text-black transition duration-150;
+  @apply lg:py-4 lg:px-16 p-3 text-[10px] lg:text-base bg-orange-500 hover:bg-white hover:text-black transition duration-150;
 }
 .btn-outline {
-  @apply py-4 px-16 border-2 hover:bg-white hover:text-black transition duration-150;
+  @apply lg:py-4 lg:px-16 p-3 text-[10px] lg:text-base border-2 hover:bg-white hover:text-black transition duration-150;
 }
 @font-face {
   font-family: idk;

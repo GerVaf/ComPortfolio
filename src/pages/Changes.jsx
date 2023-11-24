@@ -5,23 +5,36 @@ import Test from "./Test";
 const Changes = () => {
   const [startPoint, setStartPoint] = useState(0);
   const controls = useAnimation();
+  console.log(window.innerWidth);
+  console.log(window.scrollY);
 
   const handleScroll = useCallback(() => {
-    
     setStartPoint(window.scrollY);
 
-    if (window.scrollY < 2000) {
-      controls.start({
-        scale: 1 + window.scrollY / 1000,
-      });
-    } else if (window.scrollY > 2000 && window.scrollY < 2500) {
-      controls.start({
-        scale: 1 + window.scrollY / 5,
-      });
+    if (window.innerWidth > 820) {
+      if (window.scrollY < 2000) {
+        controls.start({
+          scale: 1 + window.scrollY / 1000,
+        });
+      } else if (window.scrollY > 2000 && window.scrollY < 2500) {
+        controls.start({
+          scale: 1 + window.scrollY / 5,
+        });
+      } else {
+        controls.start({
+          scale: 815,
+        });
+      }
     } else {
-      controls.start({
-        scale: 815,
-      });
+      if (window.scrollY < 1730) {
+        controls.start({
+          scale: 1 + window.scrollY / 5500,
+        });
+      } else {
+        controls.start({
+          scale: 815,
+        });
+      }
     }
   }, [controls]);
 
@@ -37,12 +50,18 @@ const Changes = () => {
     };
   }, [handleScroll]);
 
-  console.log(startPoint);
+  // console.log(startPoint);
 
   return (
     <div
       className={`w-full h-[100vh] flex items-center justify-center overflow-hidden ${
-        window.scrollY > 2000 ? "fixed top-0" : " static"
+        window.innerWidth > 820
+          ? window.scrollY > 2000
+            ? "fixed top-0"
+            : " static"
+          : window.scrollY > 1730
+          ? "fixed top-0"
+          : " static"
       }`}
     >
       <div className="w-[80%] flex justify-center text-white relative">

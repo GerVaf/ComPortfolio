@@ -60,36 +60,36 @@ const Hero = () => {
 
   // console.log(activeIndex);
 
-  const icons = [
-    {
-      id: 1,
-      icon: <BsInstagram />,
-    },
-    {
-      id: 2,
-      icon: <BsInstagram />,
-    },
-    {
-      id: 3,
-      icon: <BsInstagram />,
-    },
-    {
-      id: 4,
-      icon: <BsInstagram />,
-    },
-    {
-      id: 5,
-      icon: <BsInstagram />,
-    },
-    {
-      id: 6,
-      icon: <BsInstagram />,
-    },
-  ];
+  // const icons = [
+  //   {
+  //     id: 1,
+  //     icon: <BsInstagram />,
+  //   },
+  //   {
+  //     id: 2,
+  //     icon: <BsInstagram />,
+  //   },
+  //   {
+  //     id: 3,
+  //     icon: <BsInstagram />,
+  //   },
+  //   {
+  //     id: 4,
+  //     icon: <BsInstagram />,
+  //   },
+  //   {
+  //     id: 5,
+  //     icon: <BsInstagram />,
+  //   },
+  //   {
+  //     id: 6,
+  //     icon: <BsInstagram />,
+  //   },
+  // ];
   return (
     <div className=" overflow-hidden relative">
       {/* top bar active animation */}
-      <div className="flex absolute z-30 w-full justify-center mt-20">
+      <div className="lg:flex lg:absolute lg:flex-row hidden z-30 w-full justify-center mt-20">
         <div className="flex gap-16 w-[80%]">
           {data.map((el) => (
             <div key={el.id} className="flex flex-col gap-5 w-3/12">
@@ -113,7 +113,7 @@ const Hero = () => {
       </div>
 
       {/* right nav bar  */}
-      <div className=" absolute z- text-white flex flex-col right-[5vw] top-[20vh] gap-5 text-lg">
+      {/* <div className=" absolute z- text-white flex flex-col right-[5vw] top-[20vh] gap-5 text-lg">
         {icons.map((ic) => {
           return (
             <div key={ic.id} className=" cursor-pointer">
@@ -121,7 +121,7 @@ const Hero = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
 
       {/* background decoration and inner data  */}
       <motion.div
@@ -158,13 +158,13 @@ const Hero = () => {
               className="w-full h-full relative flex items-center  z-50"
             >
               {/* side text  */}
-              <p className="text-white rotate-90 absolute left-[10%]">
+              <p className="text-white lg:block hidden rotate-90 absolute left-[10%]">
                 fapwoegopqwrngoqwngf
               </p>
 
-              <div className=" w-[60%] h-[50%] flex ">
+              <div className=" lg:w-[60%] lg:h-[50%] w-[80%] h-[60%]  flex lg:flex-row flex-col ">
                 {/* left image  */}
-                <div className="w-2/4 h-full relative">
+                <div className="lg:w-2/4 w-full h-full relative">
                   <img
                     className=" h-full w-full object-cover absolute z-10"
                     src={el.image}
@@ -172,16 +172,17 @@ const Hero = () => {
                   />
                   <div className="h-full w-full inner-img-deco absolute z-20"></div>
                 </div>
+
                 {/* right data and button */}
-                <div className="w-2/4 h-full flex items-center text-white relative z-40">
-                  <div className=" absolute -left-28 flex flex-col gap-5">
-                    <div className="flex flex-col text-5xl gap-5">
+                <div className="lg:w-2/4 h-full  flex items-center text-white relative z-40">
+                  <div className=" lg:absolute lg:-left-28 flex flex-col gap-5">
+                    <div className="flex flex-col lg:text-5xl gap-5">
                       <p>{el.header}</p>
                       <p>{el.title}</p>
                     </div>
-                    <div className="flex justify-between gap-10">
+                    <div className="flex lg:justify-between gap-10">
                       <button className="btn ">View Release</button>
-                      <button className="btn-outline">
+                      <button className="btn-outline ">
                         Listen On Playlist
                       </button>
                     </div>
