@@ -5,7 +5,7 @@ import Test from "./Test";
 const Changes = () => {
   const [startPoint, setStartPoint] = useState(0);
   const controls = useAnimation();
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   console.log(window.scrollY);
 
   const handleScroll = useCallback(() => {
