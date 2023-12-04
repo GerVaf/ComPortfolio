@@ -5,17 +5,21 @@ import Test from "./pages/Test";
 import Nav from "./pages/Nav";
 import Main from "./pages/Main";
 import ChangeSection from "./pages/ChangeSection";
+import ScrollImg from "./pages/ScrollImg";
 
 const App = () => {
   return (
     <div className="h-[700vh] bg-[rgb(21,21,21)] scrollbar-none">
-      <Nav />
-      <Main />
-      <Hero />
-      <Body />
-      <ChangeSection />
-      {/* <Changes /> */}
-      <Test/>
+      <div className=" relative z-0">
+        <Nav />
+        <Main />
+        <Hero />
+        <Body />
+        <ChangeSection />
+        {/* <Changes /> */}
+        <Test />
+      </div>
+      <ScrollImg />
     </div>
   );
 };
