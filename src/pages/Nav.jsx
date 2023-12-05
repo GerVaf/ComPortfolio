@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { BsX } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const links = [
-    { path: "/work", text: "Work" },
+    { path: "/", text: "Home" },
     { path: "/solutions", text: "Solutions" },
     { path: "/services", text: "Services" },
     { path: "/aboutus", text: "About Us" },
@@ -44,7 +45,7 @@ const Nav = () => {
     <>
       {isDesktop ? (
         // for desktop
-        <div className="text-white flex h-[10vh] items-center px-5 sm:px-10 sm:py-5 sm:items-center justify-between">
+        <div className="text-white bg-black flex h-[10vh] items-center px-5 sm:px-10 sm:py-5 sm:items-center justify-between">
           {/* logo don't extract it cuz it's so long */}
           <div className={"flex-1"} to={"/"}>
             <div className=" w-48">Blahh</div>
@@ -52,7 +53,7 @@ const Nav = () => {
           {/* link category for Desktop */}
           <div className="text-md  items-center flex gap-10 h-10 font-mono">
             {links.map((link, index) => (
-              <div to={link.path} key={index}>
+              <Link to={link.path} key={index}>
                 <div
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
@@ -73,7 +74,7 @@ const Nav = () => {
                     />
                   )}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

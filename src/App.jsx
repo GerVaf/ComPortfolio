@@ -1,25 +1,19 @@
 import React from "react";
-import Hero from "./pages/Hero";
-import Body from "./pages/Body";
-import Test from "./pages/Test";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import Nav from "./pages/Nav";
-import Main from "./pages/Main";
-import ChangeSection from "./pages/ChangeSection";
-import ScrollImg from "./pages/ScrollImg";
+import Footer from "./pages/Footer";
+import Submit from "./pages/Submit";
 
 const App = () => {
   return (
-    <div className="h-[700vh] bg-[rgb(21,21,21)] scrollbar-none">
-      <div className=" relative z-0">
-        <Nav />
-        <Main />
-        <Hero />
-        <Body />
-        <ChangeSection />
-        {/* <Changes /> */}
-        <Test />
-      </div>
-      <ScrollImg />
+    <div className="flex flex-col scrollbar-thin">
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/submit" element={<Submit />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };

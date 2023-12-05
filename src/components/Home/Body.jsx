@@ -1,6 +1,6 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import Brand from "../components/Body/Brand";
+import Brand from "../Body/Brand";
 
 const Body = () => {
   return (

@@ -20,20 +20,24 @@ const ChangeSection = () => {
 
   const scaleProgess = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.4, 0.6, 1],
-    [2, 20, 50, 100, 1000]
+    [0, 0.2, 0.4, 0.6, 0.8, 1],
+    [2, 20, 50, 400, 500, 1300]
   );
-  const opacityProgress = useTransform(scrollYProgress, [1], [1]);
+  const translateYProgress = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.4, 0.6, 1],
+    [0, 10, 200, 300, -400]
+  );
   return (
     <div>
       <div ref={containerRef} className="h-[450vh]  relative overflow-hidden">
         <motion.h1
-          style={{ scale: scaleProgess, opacity: opacityProgress }}
-          className="text-white font-bold absolute top-[10%] left-[35%] lg:left-[50%] -translate-x-[50%]"
+          style={{ scale: scaleProgess, translateX: translateYProgress }}
+          className="text-white font-bold absolute cursor-none top-[10%] left-[35%] lg:left-[50%] -translate-x-[50%]"
         >
-          OPAGUE
-          <br />
-          <p className="-mt-[10px]">INDUSTIRES</p>
+          RELEASES
+          {/* <br />
+          <p className="-mt-[10px]">INDUSTRIES</p> */}
         </motion.h1>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 
-const ScrollImg = () => {
+const ScrollImg3 = () => {
   const lenis = new Lenis();
 
   function raf(time) {
@@ -20,20 +20,20 @@ const ScrollImg = () => {
 
   const opacityProgess = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.4, 0.6, 1],
-    [1, 0.9, 0.8, 0.6, 0.3]
+    [0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.9, 1],
+    [0, 0.9, 1, 1, 0.8, 0.6, 0.4, 0]
   );
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-col bg-white justify-center items-center ">
       <div
         ref={overScroll}
-        className="h-[250vh] relative overflow-hidden justify-center lg:w-[40%]  "
+        className="h-[250vh] relative overflow-hidden justify-center lg:w-[40%] "
       >
         <motion.img
-          className=" lg:w-[40vw] w-full -z-10 fixed  bottom-0 lg:right-[30vw] lg:left-[30vw] object-cover"
+          className=" lg:w-[40vw] w-full fixed  bottom-0 lg:right-[30vw] lg:left-[30vw] object-cover"
           style={{ opacity: opacityProgess }}
-          src="https://i.pinimg.com/564x/06/ad/39/06ad39c14f5c2c86f9330d7590719693.jpg"
+          src="https://i.pinimg.com/564x/36/0f/49/360f499010f89166b6a1d721ff1afba4.jpg"
           alt=""
         />
         {/* <motion.h1
@@ -44,7 +44,7 @@ const ScrollImg = () => {
           <br />
           <p className="-mt-[10px]">INDUSTIRES</p>
         </motion.h1> */}
-        <p className="mt-[200vh] px-5 lg:px-0">
+        <p className="mt-[150vh] px-5 lg:px-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nemo
           dignissimos est, enim laboriosam perferendis veritatis sint laborum,
           atque magnam officia. Labore id deleniti quae, ullam odit
@@ -62,4 +62,4 @@ const ScrollImg = () => {
   );
 };
 
-export default ScrollImg;
+export default ScrollImg3;
