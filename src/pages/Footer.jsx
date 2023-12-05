@@ -16,7 +16,7 @@ const Footer = () => {
           <p>OMG PORTAL</p>
           <p>LABELS & BRANDS</p>
           <p>AUSPICIOUS MUSIC</p>
-          <Link to={"/submit"}>SUBMISSION</Link>
+          <Link to={"/submission"}>SUBMISSION</Link>
         </div>
         <div className="flex justify-around w-full text-[8px] lg:text-base">
           <p>LICENSCING</p>

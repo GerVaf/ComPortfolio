@@ -73,8 +73,8 @@ const Submission = () => {
             onChange={handleFileChange}
             type="file"
           />
-          <p className="border-2 border-dashed border-black rounded-md p-5 text-center cursor-pointer">
-            Click here
+          <p className="border-2 border-dashed border-black rounded-md p-5 py-10 text-center cursor-pointer">
+            Drop your demo here
           </p>
         </div>
 
