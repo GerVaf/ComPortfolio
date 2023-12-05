@@ -5,6 +5,7 @@ import Nav from "./pages/Nav";
 import Footer from "./pages/Footer";
 import Submit from "./pages/Submit";
 import Submission from "./components/Submit/Submission";
+import Ads from "./components/ads/Ads";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/submission" element={<Submission />} />
       </Routes>
       <Footer />
+      {/* <Ads/> */}
     </div>
   );
 };
