@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
           <p>OMG PORTAL</p>
           <p>LABELS & BRANDS</p>
           <p>AUSPICIOUS MUSIC</p>
-          <p>SUBMISSION</p>
+          <Link to={"/submit"}>SUBMISSION</Link>
         </div>
         <div className="flex justify-around w-full text-[8px] lg:text-base">
           <p>LICENSCING</p>
