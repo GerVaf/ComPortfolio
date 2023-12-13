@@ -20,15 +20,17 @@ const BlackOut = () => {
 
   const backgroundColorProgress = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.9, 1],
+    [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1],
     [
       "#ffffff",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff",
-      "#333333",
-      "#000",
+      "#959595",
+      "#8B8B8B",
+      "#818181",
+      "#777777",
+      "#636363",
+      "#595959",
+      "#4F4F4F",
+      "#313131",
       "#000",
     ]
   );
@@ -37,8 +39,8 @@ const BlackOut = () => {
     <div className="flex flex-col justify-center items-center">
       <motion.div
         ref={overScroll}
-        className="h-[150vh] w-full"
-        style={{ backgroundColor: backgroundColorProgress }}
+        className="h-[200vh] w-full blah"
+        // style={{ backgroundColor: backgroundColorProgress }}
       >
         {/* Your content goes here */}
       </motion.div>

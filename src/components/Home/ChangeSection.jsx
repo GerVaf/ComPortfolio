@@ -30,7 +30,10 @@ const ChangeSection = () => {
   );
   return (
     <div>
-      <div ref={containerRef} className="h-[450vh]  relative overflow-hidden">
+      <div
+        ref={containerRef}
+        className="h-[450vh] bg-black relative overflow-hidden"
+      >
         <motion.h1
           style={{ scale: scaleProgess, translateX: translateYProgress }}
           className="text-white font-bold absolute cursor-none top-[10%] left-[35%] lg:left-[50%] -translate-x-[50%]"

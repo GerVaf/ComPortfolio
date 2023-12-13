@@ -12,10 +12,9 @@ import BlackOut from "../components/Home/BlackOut";
 
 const Home = () => {
   return (
-    <div className=" bg-[rgb(21,21,21)] scrollbar-thin ">
+    <div className=" scrollbar-thin ">
       <div className=" relative z-0">
         <Main />
-        <Hero />
         <Body />
         <ChangeSection />
         {/* <Changes /> */}
@@ -26,6 +25,7 @@ const Home = () => {
       <ScrollImg3 />
       <ScrollImg4 />
       <BlackOut />
+      <Hero />
     </div>
   );
 };

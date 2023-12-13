@@ -113,16 +113,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* right nav bar  */}
-      {/* <div className=" absolute z- text-white flex flex-col right-[5vw] top-[20vh] gap-5 text-lg">
-        {icons.map((ic) => {
-          return (
-            <div key={ic.id} className=" cursor-pointer">
-              {ic.icon}
-            </div>
-          );
-        })}
-      </div> */}
+
 
       {/* background decoration and inner data  */}
       <motion.div

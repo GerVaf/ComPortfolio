@@ -3,7 +3,7 @@ import logo from "../../assets/whiteLogo.png";
 import sign from "../../assets/sign.png";
 const Main = () => {
   return (
-    <div className="flex lg:flex-row flex-col-reverse justify-around mb-5">
+    <div className="flex lg:flex-row flex-col-reverse bg-black justify-around pb-5">
       {/* left information  */}
       <div className="lg:w-3/6 flex flex-col items-center text-white">
         <h1 className="bla text-[50px] lg:text-[150px]">Welcome</h1>
