@@ -36,7 +36,7 @@ const ScrollImg4 = () => {
           src="https://i.pinimg.com/564x/2a/2f/1f/2a2f1f71ad232da0420311dabd889f32.jpg"
           alt=""
         />
-        <p className="mt-[150vh] px-5 lg:px-0">
+        <p className="mt-[150vh] px-5 lg:px-0 relative z-50 select-none">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nemo
           dignissimos est, enim laboriosam perferendis veritatis sint laborum,
           atque magnam officia. Labore id deleniti quae, ullam odit

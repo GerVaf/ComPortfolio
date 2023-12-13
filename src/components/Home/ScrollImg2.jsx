@@ -44,7 +44,7 @@ const ScrollImg2 = () => {
           <br />
           <p className="-mt-[10px]">INDUSTIRES</p>
         </motion.h1> */}
-        <p className="mt-[150vh] px-5 lg:px-0">
+        <p className="mt-[150vh] px-5 lg:px-0 relative z-50 select-none">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nemo
           dignissimos est, enim laboriosam perferendis veritatis sint laborum,
           atque magnam officia. Labore id deleniti quae, ullam odit

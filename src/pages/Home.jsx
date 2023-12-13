@@ -12,7 +12,7 @@ import BlackOut from "../components/Home/BlackOut";
 
 const Home = () => {
   return (
-    <div className=" scrollbar-thin ">
+    <div className=" scrollbar-thin scroll-smooth ">
       <div className=" relative z-0">
         <Main />
         <Body />
