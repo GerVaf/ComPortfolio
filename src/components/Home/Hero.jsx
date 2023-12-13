@@ -86,9 +86,9 @@ const Hero = () => {
   //     icon: <BsInstagram />,
   //   },
   // ];
-  
+
   return (
-    <div className=" overflow-hidden relative">
+    <div className=" overflow-hidden relative ">
       {/* top bar active animation */}
       <div className="lg:flex lg:absolute lg:flex-row hidden z-30 w-full justify-center mt-20">
         <div className="flex gap-16 w-[80%]">
@@ -112,8 +112,6 @@ const Hero = () => {
           ))}
         </div>
       </div>
-
-
 
       {/* background decoration and inner data  */}
       <motion.div
@@ -149,11 +147,6 @@ const Hero = () => {
               transition={{ duration: 1.5 }}
               className="w-full h-full relative flex items-center  z-50"
             >
-              {/* side text  */}
-              <p className="text-white lg:block hidden rotate-90 absolute left-[10%]">
-                fapwoegopqwrngoqwngf
-              </p>
-
               <div className=" lg:w-[60%] lg:h-[50%] w-[80%] h-[60%]  flex lg:flex-row flex-col ">
                 {/* left image  */}
                 <div className="lg:w-2/4 w-full h-full relative">

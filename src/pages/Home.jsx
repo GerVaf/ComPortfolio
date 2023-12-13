@@ -9,6 +9,7 @@ import ScrollImg2 from "../components/Home/ScrollImg2";
 import ScrollImg3 from "../components/Home/ScrollImg3";
 import ScrollImg4 from "../components/Home/ScrollImg4";
 import BlackOut from "../components/Home/BlackOut";
+import ContactUs from "../components/Contact/ContactUs";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <ScrollImg4 />
       <BlackOut />
       <Hero />
+      {/* <ContactUs/> */}
     </div>
   );
 };

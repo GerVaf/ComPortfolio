@@ -39,8 +39,6 @@ const ChangeSection = () => {
           className="text-white font-bold absolute cursor-none top-[10%] left-[35%] lg:left-[50%] -translate-x-[50%]"
         >
           RELEASES
-          {/* <br />
-          <p className="-mt-[10px]">INDUSTRIES</p> */}
         </motion.h1>
       </div>
     </div>
