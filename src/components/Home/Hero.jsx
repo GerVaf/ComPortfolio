@@ -86,6 +86,7 @@ const Hero = () => {
   //     icon: <BsInstagram />,
   //   },
   // ];
+  
   return (
     <div className=" overflow-hidden relative">
       {/* top bar active animation */}
@@ -174,13 +175,13 @@ const Hero = () => {
                 </div>
 
                 {/* right data and button */}
-                <div className="lg:w-2/4 h-full  flex items-center text-white relative z-40">
+                <div className="lg:w-2/4 h-full  flex items-center text-white relative z-50">
                   <div className=" lg:absolute lg:-left-28 flex flex-col gap-5">
                     <div className="flex flex-col lg:text-5xl gap-5">
                       <p>{el.header}</p>
                       <p>{el.title}</p>
                     </div>
-                    <div className="flex lg:justify-between gap-10">
+                    <div className="flex lg:justify-between relative gap-10">
                       <button className="btn ">View Release</button>
                       <button className="btn-outline ">
                         Listen On Playlist

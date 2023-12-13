@@ -31,7 +31,7 @@ const ScrollImg2 = () => {
         className="h-[250vh] relative overflow-hidden justify-center lg:w-[40%] "
       >
         <motion.img
-          className=" lg:w-[40vw] w-full fixed  bottom-0 lg:right-[30vw] lg:left-[30vw] object-cover"
+          className=" lg:w-[40vw] w-full fixed z-0  bottom-0 lg:right-[30vw] lg:left-[30vw] object-cover"
           style={{ opacity: opacityProgess }}
           src="https://i.pinimg.com/564x/2c/2e/17/2c2e17c31c5559173d5cf2fa0dd203b0.jpg"
           alt=""

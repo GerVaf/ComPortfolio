@@ -24,6 +24,7 @@ const ScrollImg = () => {
     [0, 0.9, 1, 1, 0.8, 0.6, 0.3, 0]
   );
 
+  // console.log(scrollYProgress);
   return (
     <div className="flex bg-white flex-col justify-center items-center ">
       <div
@@ -31,19 +32,11 @@ const ScrollImg = () => {
         className="h-[250vh] relative overflow-hidden justify-center lg:w-[40%]  "
       >
         <motion.img
-          className=" lg:w-[40vw] w-full fixed  bottom-0 lg:right-[30vw] lg:left-[30vw] object-cover"
+          className=" lg:w-[40vw] w-full fixed z-0 bottom-0 lg:right-[30vw] lg:left-[30vw] object-cover"
           style={{ opacity: opacityProgess }}
           src="https://i.pinimg.com/564x/06/ad/39/06ad39c14f5c2c86f9330d7590719693.jpg"
           alt=""
         />
-        {/* <motion.h1
-          style={{ scale: scaleProgess, opacity: opacityProgress }}
-          className="text-black font-bold absolute top-[10%] left-[35%] lg:left-[50%] -translate-x-[50%]"
-        >
-          OPAGUE
-          <br />
-          <p className="-mt-[10px]">INDUSTIRES</p>
-        </motion.h1> */}
         <p className="mt-[150vh] px-5 lg:px-0">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nemo
           dignissimos est, enim laboriosam perferendis veritatis sint laborum,
